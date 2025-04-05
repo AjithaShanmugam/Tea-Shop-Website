@@ -1,0 +1,220 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.overall{
+    overflow: hidden;
+}
+body{
+    font-family: monospace;
+}
+nav{
+    background-color:white;
+    /* box-shadow: 8px 5px 10px rgb(17, 5, 5); */
+    box-shadow: 5px 3px 7px lightgray;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    color: white;
+    position: fixed;
+    width: 100%;
+    left: 50%;
+    top: 2px;
+    transform: translateX(-50%);
+    z-index: 1;
+    font-family: cursive;
+}
+
+nav h2{
+    color: brown;
+}
+
+nav h2 span{
+    color:green;
+}
+
+nav i{
+    color: brown;
+    font-size: 30px;
+}
+
+.anchor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:15px;
+}
+
+.anchor a{
+    font-size: 18px;
+    color: brown;
+    text-decoration: none;
+    transition: all 1s;
+    cursor: pointer;
+    position: relative;
+}
+
+input{
+    display: none;
+}
+
+label{
+    display: none;
+}
+
+.anchor a:hover,.anchor a:hover{
+    background-color: brown;
+   color:white;
+}
+
+input:checked~.anchor{
+    left: 0;
+}
+
+section{
+    background-color:burlywood;
+}
+.homepg{
+    height: 100vh;
+    color: white;
+    display: flex;
+    justify-content:center;
+    /* align-items: center; */
+    gap: 20px;
+}
+.himage{
+   width: 50%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+
+.himage img{
+      width: 100%;
+      animation-name: img;
+      animation-duration: 2s;
+      position: relative;
+  }
+  @keyframes img{
+      from{
+         transform: scale(1.4);
+      }
+  }
+.hcontent{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    justify-content:center;
+    align-items: center;
+    padding: 20px;
+}
+.hcontent h2{
+    /* color:white; */
+    /* color: rgb(224, 7, 7); */
+    /* text-shadow: 3px 2px rgb(1, 15, 17); */
+    font-size: 53px;
+    animation-name: con;
+    animation-duration: 3s;
+    position: relative;
+}
+@keyframes con{
+    from{
+       /* top: -300px; */
+       opacity: 0;
+       transform: translateY(-190px);
+       
+    }
+    to{
+        /* top: 0; */
+    }
+}
+.hcontent p{
+   font-size: 19px;
+    animation-name: con1;
+    animation-duration: 3s;
+    position: relative;
+}
+@keyframes con1{
+    from{
+       left: -1000px;
+    }
+    to{
+        left: 0;
+    }
+}
+button{
+    width: 150px;
+    padding: 10px;
+    border: none;
+    border-radius: 15px;
+    background-color: brown;
+    color: white;
+    transition: all 1s;
+    font-size: 20px;
+    animation-name: bu;
+    animation-duration: 3s;
+    position: relative;
+}
+@keyframes bu{
+    from{
+        transform: translateY(250px);
+       /* bottom: -300px; */
+    }
+    to{
+        bottom: 0;
+    }
+}
+
+.homepg button:hover{
+    background-color:white;
+    color: orangered;
+}
+.hcontent h1{
+    font-size: 70px;
+    font-family: cursive;
+}
+
+/* QUERY */
+@media only screen and (max-width:600px){
+    .anchor{
+        border-radius: 15px;
+        position: fixed;
+        background-color: brown;
+        top:75px;
+        left: 150%;
+        width: 100%;
+        height: 60vh;
+        flex-direction: column;
+        gap:20px;
+        transition: all 1s;
+        padding-left: 30px;
+        padding-right: 30px;
+        font-size: 25px;
+    }
+    label{
+        display: inline;
+    }
+   input{
+    display: none;
+   }
+   .homepg{
+    min-height: 60vh;
+    text-align: center;
+   }
+  
+}
+@media only screen and (min-width:600px) and (max-width:900px){
+    nav h2{
+        font-size:14px;
+    }
+    .anchor a{
+        font-size: 15px;
+    }
+    .hcontent h1{
+        font-size: 30px;
+    }
+}
